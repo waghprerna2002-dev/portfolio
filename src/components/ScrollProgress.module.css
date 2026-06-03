@@ -1,0 +1,61 @@
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6C63FF, #00D4FF);
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+  transition: width 0.1s linear;
+}
+
+.topButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6C63FF, #00D4FF);
+  color: #F8FAFC;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.4);
+  z-index: 900;
+  transition: all 0.3s ease;
+  animation: slideInUp 0.3s ease;
+}
+
+.topButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(108, 99, 255, 0.6);
+}
+
+.topButton:active {
+  transform: scale(0.95);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .topButton {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
